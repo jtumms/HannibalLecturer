@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hannibal Lecturer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2 id="title">Hannibal Lecturer</h2>
+      </nav>
+    </header>
+    <div class="container">
+      <section class="create-lecturer">
+        <form class="">
+          <input type="text" name="name" value="" placeholder="Enter a New Hannibal">
+          <input type="text" name="topic" value="" placeholder="Enter Topic">
+          <input type="text" name="image" value="" placeholder="Enter Image Link">
+          <input type="submit" name="create-lecturer" value="Submit">
+          <input type="button" name="show-lecturers" value="Get Lecturers">
+
+        </form>
+      </section>
+
+      <section class='lecturers hidden'>
+
+      </section>
+
+      <section class="create-rating hidden">
+        <form class="">
+          <input type="text" name="author" value="" placeholder="Author">
+          <input type="text" name="text" value="" placeholder="Comment">
+          <span class="thumbs">Is Good?<input id="isGood" type="checkbox" name="isGood" value=""></span>
+          <input type="submit" name="" value="Submit Rating">
+        </form>
+      </section>
+
+      <section class='ratings hidden'>
+
+      </section>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="bower_components/underscore/underscore-min.js" charset="utf-8"></script>
+    <script src="templates.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
