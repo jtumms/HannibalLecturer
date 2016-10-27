@@ -23,9 +23,6 @@ import java.time.LocalDate;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class HannibalLecturerApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
 
 	@Autowired
 	ReviewRepository reviews;
@@ -44,6 +41,7 @@ public class HannibalLecturerApplicationTests {
 	}
 
 //	String name, String topic, String image
+	@Test
 	public void aTestCreateLecturer() throws Exception {
 		mockMvc.perform(
 				MockMvcRequestBuilders.post("/lecturers")
@@ -52,6 +50,19 @@ public class HannibalLecturerApplicationTests {
 						.param("image", "http://www.physics.rutgers.edu/ast/m31_sm.jpeg")
 		);
 		Assert.assertTrue(lecturers.count() == 1);
+	}
+//	String author, String text, boolean isGood, Integer lecturerId
+	@Test
+	public void bTestCreateReview() throws Exception {
+		mockMvc.perform(
+				MockMvcRequestBuilders.post("/reviews")
+				.param("author", "Mickey Mouse")
+				.param("text", "This is a test of Create Review")
+				.param("isGood", "true")
+				.param("lecturerId", "2")
+
+		);
+		Assert.assertTrue(reviews.count() == 1);
 	}
 
 
